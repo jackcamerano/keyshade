@@ -82,7 +82,7 @@ const devSchema = z.object({
     .default('false')
     .transform((val) => val === 'true')
     .pipe(z.boolean()),
-  SMTP_EMAIL_ADDRESS: z.string().email(),
+  SMTP_EMAIL_ADDRESS: z.string(),
   SMTP_PASSWORD: z.string(),
   FROM_EMAIL: z
     .string()

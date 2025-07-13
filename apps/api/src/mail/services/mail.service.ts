@@ -157,12 +157,12 @@ export class MailService implements IMailService {
   ): Promise<void> {
     try {
       this.log.log(`Sending email to ${email}`)
-      await this.transporter.sendMail({
+      /*await this.transporter.sendMail({
         from: process.env.FROM_EMAIL,
         to: email,
         subject: subject,
         html: body
-      })
+      })*/
       this.log.log(`Email sent to ${email}`)
     } catch (error) {
       this.log.error(`Error sending email to ${email}: ${error.message}`)
